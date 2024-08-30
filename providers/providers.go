@@ -38,7 +38,7 @@ func NewProvider(providerConfig options.Provider) (Provider, error) {
 	}
 	switch providerConfig.Type {
 	case options.Passport:
-		return NewPassportProvider(p)
+		return NewPassportProvider(providerData, providerConfig), nil
 	case options.ADFSProvider:
 		return NewADFSProvider(providerData, providerConfig), nil
 	case options.AzureProvider:
