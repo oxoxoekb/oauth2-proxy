@@ -37,6 +37,8 @@ func NewProvider(providerConfig options.Provider) (Provider, error) {
 		return nil, fmt.Errorf("could not create provider data: %v", err)
 	}
 	switch providerConfig.Type {
+	case options.Passport:
+		return NewPassportProvider(p)
 	case options.ADFSProvider:
 		return NewADFSProvider(providerData, providerConfig), nil
 	case options.AzureProvider:
