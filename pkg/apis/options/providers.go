@@ -136,6 +136,9 @@ const (
 
 	// OIDCProvider is the provider type for OIDC
 	OIDCProvider ProviderType = "oidc"
+
+	// PassportProvider is the provider type for SKB Kontur Passport
+	PassportProvider ProviderType = "passport"
 )
 
 type KeycloakOptions struct {
